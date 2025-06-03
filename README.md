@@ -73,44 +73,8 @@ Tüm `.cs` dosyaları `src/` klasörü içinde yer almaktadır:
 ## 🧭 Sınıf Diyagramı
 
 ![Sınıf Diyagramı]![Sınıf Diyagramı](https://github.com/user-attachments/assets/4466f606-9b82-40bf-880e-abf0bdd83299)
-+----------------------+
-|     Oyun Başlat      |
-+----------+-----------+
-           |
-           v
-+----------------------+
-| Oyuncu Adı Sor       |
-+----------+-----------+
-           |
-           v
-+----------------------+
-| Yeni Düşman Oluştur  |
-+----------+-----------+
-           |
-           v
-+----------------------+
-| Oyuncu Hamlesi       |
-| (1-5) Seçim Ekranı   |
-+----------+-----------+
-           |
-           v
-+----------------------+
-| Düşman Hasar Alır?   |
-+----------+-----------+
-           |
-           v
-+----------------------+
-| Düşman Ölmedi mi?    |
-+----+-----------+-----+
-     |           |
-    Hayır        Evet
-     |            |
-     v            v
-Düşman Hamle  XP Kazan
-               Yeni Düşman
 
 
----
 
 ## 🚀 Nasıl Çalıştırılır?
 
