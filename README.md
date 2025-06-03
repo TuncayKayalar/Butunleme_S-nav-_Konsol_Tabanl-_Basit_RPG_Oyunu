@@ -9,12 +9,16 @@ Bu C# ile geliştirilen basit RPG oyununda oyuncu, karşısına çıkan düşman
 
 ## 🧱 Sınıf Yapısı ve OOP Açıklamaları
 
-**OOP Kavramları Kullanımı:**
-
-- ✅ Kalıtım (Inheritance): `Oyuncu` ve `Dusman` sınıfları `Karakter` sınıfından türetilmiştir.
-- ✅ Polimorfizm (Polymorphism): `Vur()` metodu her sınıfta farklı çalışır (`override`).
-- ✅ Kapsülleme (Encapsulation): Karakter verileri sınıf içerisinde kontrol edilir.
-- ✅ Arayüz (Interface): `IOzelHareket` arayüzü, özel büyü saldırısını tanımlar.
+Nesne Yönelimli Programlama (OOP) Açıklamaları
+OOP İlkesi	Uygulama
+Sınıflar (Class)	Karakter, Oyuncu, Dusman, Zombi, Goblin, Ejderha, Oyun
+Kalıtım	Karakter → Oyuncu, Karakter → Dusman, Dusman → Zombi/Ejderha/Goblin
+Encapsulation	Can, Mana, Guc gibi alanlar property olarak kullanılabilir
+Polymorphism	Vur() metodu override edilerek farklı sınıflarda farklılaşır
+Interface	IOzelHareket → BüyüSaldirisi metodunu tanımlar
+Statik Üyeler	Karakter.ToplamVurus tüm saldırıların sayısını takip eder
+Listeler	Oyuncu.Log → saldırı geçmişini tutar
+Random Kullanımı	Saldırı gücü, düşman tipi, düşman hamleleri için
 
 **Sınıf Yapısı:**
 
@@ -69,6 +73,41 @@ Tüm `.cs` dosyaları `src/` klasörü içinde yer almaktadır:
 ## 🧭 Sınıf Diyagramı
 
 ![Sınıf Diyagramı]![Sınıf Diyagramı](https://github.com/user-attachments/assets/4466f606-9b82-40bf-880e-abf0bdd83299)
++----------------------+
+|     Oyun Başlat      |
++----------+-----------+
+           |
+           v
++----------------------+
+| Oyuncu Adı Sor       |
++----------+-----------+
+           |
+           v
++----------------------+
+| Yeni Düşman Oluştur  |
++----------+-----------+
+           |
+           v
++----------------------+
+| Oyuncu Hamlesi       |
+| (1-5) Seçim Ekranı   |
++----------+-----------+
+           |
+           v
++----------------------+
+| Düşman Hasar Alır?   |
++----------+-----------+
+           |
+           v
++----------------------+
+| Düşman Ölmedi mi?    |
++----+-----------+-----+
+     |           |
+    Hayır        Evet
+     |            |
+     v            v
+Düşman Hamle  XP Kazan
+               Yeni Düşman
 
 
 ---
